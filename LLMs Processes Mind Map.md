@@ -1,62 +1,47 @@
-mindmap
-  root((Building LLMs))
-    Language Modelling
-      Autoregressive prediction
-      Next-token probabilities
-      Transformer architecture
-      Cross-entropy loss
-    Tokenization
-      Token IDs
-      Byte Pair Encoding
-      Subword units
-      Vocabulary size
-      Numerical limitations
-    Training Data
-      Common Crawl
-      Data cleaning
-      PII filtering
-      Deduplication
-      Quality classification
-      Domain weighting
-    Scaling Laws
-      Model parameters
-      Training tokens
-      Compute budget
-      Chinchilla scaling
-      Training cost
-      Inference cost
-    Evaluation
-      Perplexity
-      MMLU
-      Benchmark contamination
-      Human evaluation
-      Chatbot Arena
-      LLM-as-a-judge
-    Post-training
-      Supervised fine-tuning
-      Instruction datasets
-      High-quality examples
-      Preference learning
-    Alignment
-      RLHF
-        Human comparisons
-        Reward model
-        PPO
-        KL regularization
-      DPO
-        Preferred responses
-        Rejected responses
-        Direct optimization
-    Systems Engineering
-      GPUs
-      Distributed training
-      Mixed precision
-      FP16 and BF16
-      Operator fusion
-      torch.compile
-    Deployment
-      Inference efficiency
-      Latency
-      Cost
-      Monitoring
-      Safety evaluation
+GitHub is **not reading/rendering the `mindmap` Mermaid syntax**. Use this GitHub-compatible `flowchart` instead:
+
+```mermaid
+flowchart TD
+    A["Building Large Language Models"]
+
+    A --> B["Language Modelling"]
+    A --> C["Training Data"]
+    A --> D["Scaling Laws"]
+    A --> E["Evaluation"]
+    A --> F["Post-training"]
+    A --> G["Systems Engineering"]
+
+    B --> B1["Tokenization and BPE"]
+    B --> B2["Transformer Architecture"]
+    B --> B3["Next-token Prediction"]
+    B --> B4["Cross-entropy Loss"]
+
+    C --> C1["Data Collection"]
+    C --> C2["Cleaning and PII Filtering"]
+    C --> C3["Deduplication"]
+    C --> C4["Quality and Domain Weighting"]
+
+    D --> D1["Model Parameters"]
+    D --> D2["Training Tokens"]
+    D --> D3["Compute Budget"]
+    D --> D4["Chinchilla Scaling"]
+
+    E --> E1["Perplexity"]
+    E --> E2["MMLU and Benchmarks"]
+    E --> E3["Human Evaluation"]
+    E --> E4["Chatbot Arena"]
+
+    F --> F1["Supervised Fine-tuning"]
+    F --> F2["RLHF"]
+    F --> F3["Reward Modelling"]
+    F --> F4["PPO"]
+    F --> F5["DPO"]
+
+    G --> G1["GPUs"]
+    G --> G2["Mixed Precision"]
+    G --> G3["Distributed Training"]
+    G --> G4["Operator Fusion"]
+    G --> G5["Efficient Inference"]
+```
+
+Make sure the opening line is exactly ` ```mermaid ` and there are no spaces before the three backticks.
