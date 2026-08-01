@@ -166,14 +166,34 @@ Tokenizers are currently useful because Transformer computation becomes expensiv
 
 ### 4.1 Perplexity
 
-Perplexity is the exponentiated average negative log-likelihood:
+Perplexity measures how uncertain or “surprised” a language model is when predicting the next token in a sequence.
 
-$$\operatorname{PPL}(x_{1:T})=\exp\left(-\frac{1}{T}\sum_{t=1}^{T}\log p(x_t\mid x_{<t})\right).$$
+It is calculated by taking the exponential value of the model's average negative log-likelihood:
 
-- Lower perplexity means the model assigns greater probability to the observed sequence.
-- It is useful for monitoring next-token prediction during pre-training.
-- It does not directly measure instruction following, factuality, safety or reasoning.
-- Comparisons can be misleading when models use different tokenizers or evaluation corpora.
+```text
+Perplexity =
+exp(average negative log probability of the correct tokens)
+```
+
+A simplified representation is:
+
+```text
+PPL = exp(
+    -1 / number of tokens
+    ×
+    sum of the log probabilities assigned to the correct tokens
+)
+```
+
+For example, if a model has a perplexity of `10`, it can be interpreted as being uncertain between approximately 10 possible tokens at each prediction step.
+
+Key points:
+
+- A **lower perplexity** generally means the model predicts the observed token sequence more accurately.
+- A **higher perplexity** means the model is more uncertain about the correct next tokens.
+- Perplexity is useful for monitoring next-token prediction during pre-training.
+- It does not directly measure instruction following, factual accuracy, safety or reasoning ability.
+- Perplexity scores may be misleading when comparing models that use different tokenizers or evaluation datasets.
 
 ### 4.2 Downstream benchmarks
 
