@@ -77,6 +77,9 @@ Steps:
 3) Predict probability of next token
 4) Sample from the distribution
 5) Detokenize
+
+There is an AR neural Language model explained here: 
+![Language model example](images/AR_Neural_Language_Models.png)
  
 ### 2.2 Generation
 
