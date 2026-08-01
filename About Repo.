@@ -1,0 +1,42 @@
+# Machine Learning: Building Large Language Models
+
+This repository contains structured learning notes about **building Large Language Models (LLMs)**, based primarily on the Stanford CS229 guest lecture presented by Yann Dubois.
+
+It explores how language models are designed, trained, evaluated, aligned and optimized. The repository follows the complete LLM development process—from modelling language as a probability distribution to transforming a pre-trained model into a helpful AI assistant.
+
+## Topics Covered
+
+- Language modelling and probability distributions
+- Autoregressive next-token prediction
+- Neural language models and Transformer architecture
+- Tokenization and Byte Pair Encoding
+- Cross-entropy loss and log-likelihood
+- Training-data collection, cleaning and deduplication
+- LLM evaluation and perplexity
+- Standard NLP benchmarks such as MMLU
+- Scaling laws and compute-optimal training
+- Model-training costs and computational requirements
+- Supervised fine-tuning
+- Reinforcement Learning from Human Feedback
+- Reward modelling and PPO
+- Direct Preference Optimization
+- Human and AI-generated preference data
+- Hardware, GPUs and mixed-precision training
+- Systems optimization and efficient inference
+
+## Purpose of This Repository
+
+The purpose of this repository is to document my learning journey and develop a structured technical reference for understanding how modern LLMs are built.
+
+The notes are independently written for educational purposes. They are based primarily on the Stanford lecture and supplemented with explanations of standard machine-learning concepts. They are not an official Stanford transcript.
+
+## Contributions
+
+Contributions are welcome. If you identify an error, missing concept or opportunity to improve an explanation, please feel free to:
+
+- Open an issue
+- Suggest a correction
+- Submit a pull request
+- Add useful examples or learning resources
+
+Your feedback and contributions can help make this repository more accurate, complete and useful for other learners.
