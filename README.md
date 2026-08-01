@@ -66,19 +66,43 @@ At inference time, generation is iterative:
 
 Different decoding strategies—such as greedy decoding, temperature sampling or top-$k$/top-$p$ sampling—change how the next token is selected, but the underlying model still predicts $p(x_t\mid x_{<t})$.
 
-### 2.3 Forward pass
+### 2.3 Forward Pass
 
-The basic computation is:
+The forward pass processes input text and calculates the probability of each possible next token.
+
+The basic computation follows these steps:
 
 1. Raw text is converted into tokens.
-2. Token IDs are mapped to embedding vectors.
-3. The vectors pass through Transformer layers.
-4. A linear output head produces one logit per vocabulary item.
-5. Softmax converts the logits into next-token probabilities.
+2. Each token is assigned a unique token ID.
+3. The token IDs are mapped to embedding vectors.
+4. The embedding vectors pass through the Transformer layers.
+5. A linear output layer produces a score, called a **logit**, for every token in the vocabulary.
+6. The softmax function converts these logits into probabilities.
 
-For vocabulary $V$ and logit vector $z$:
+The softmax calculation can be represented as:
 
-$$p(x_t=i\mid x_{<t})=\frac{e^{z_i}}{\sum_{j\in V}e^{z_j}}.$$
+```text
+Probability of token i =
+exponential(logit for token i) ÷
+sum of the exponential values of all token logits
+```
+
+Alternatively:
+
+```text
+P(token i | preceding tokens) =
+exp(zi) / [exp(z1) + exp(z2) + ... + exp(zV)]
+```
+
+Here:
+
+- `V` represents the complete vocabulary.
+- `zi` is the logit assigned to token `i`.
+- `exp(zi)` calculates the exponential value of the token's logit.
+- The denominator adds the exponential values of all logits.
+- The vertical line `|` means **given the preceding tokens**.
+
+The resulting probabilities add up to `1`. The model can then select or sample the next token from this probability distribution.
 
 ### 2.4 Pre-training loss
 
