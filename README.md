@@ -39,12 +39,13 @@ Here:
 - `L` represents the total length of the sequence.
 - `P(x1, x2, ..., xL)` represents the probability assigned to the complete sequence.
 
-
+Language models know the structure of sentence and have syntactic knowledge of the sentence as well. 
+LMs are generative models.
 ---
 
 ## 2. Autoregressive language modelling *(approximately 00:05)*
 
-### 2.1 A Language Model as a Probability Distribution
+### 2.1 A Language Model as a Probability Distribution :  
 
 An LLM is a generative model that assigns probabilities to sequences of tokens. A token sequence can be represented as:
 
@@ -65,7 +66,18 @@ Here:
 - `P(xT | x1, x2, ..., xT-1)` represents the probability of the current token based on all preceding tokens.
 - The vertical line `|` means **given** or **based on the preceding information**.
 
+
 The model therefore learns one core task: **predicting the next token from the preceding context**.
+This is just one way, there are other methods. The down side of this methos is: in case of long sentence generation it take longer time since in backend s FOR LOOP is created and based on that the generation of process takes place therefore, the longer the sentence the longer the loop and as a result the time. 
+
+Simply its task is: to predict the next word.
+Steps: 
+1) Tokenize
+2) Forward (pass through the architecture)
+3) Predict probability of next token
+4) Sample from the distribution
+5) Detokenize
+ 
 ### 2.2 Generation
 
 At inference time, generation is iterative:
