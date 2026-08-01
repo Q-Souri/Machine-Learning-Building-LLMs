@@ -32,10 +32,7 @@ The overall process has two major phases:
 
 ### Language Modelling (LM)
 
-A **Language Model (LM)** represents a probability distribution over sequences of tokens or words.
-
-```text
-P(x1, x2, ..., xL)
+A **Language Model (LM)** represents a probability distribution over sequences of tokens or words P(x1, x2, ..., xL).
 Here:
 
 - `x1, x2, ..., xL` represent the tokens or words in the sequence.
