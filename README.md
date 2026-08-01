@@ -83,6 +83,8 @@ There is an AR neural Language model explained here:
 
 ### Loss: (a simple ML task)
 A tsk of classify next tokens' index: 
+Basically minimizing the loss is the same thing as maximizing the likelihood of wanted text. 
+![Language model example](images/LossTask.png)
  
 ### 2.2 Generation
 
