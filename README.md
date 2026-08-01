@@ -252,7 +252,6 @@ If benchmark questions—or close variants—appear in pre-training data, the re
 There is no single sufficient LLM metric. Reliable evaluation requires a portfolio of carefully specified tests and awareness of leakage, prompts, tokenizers and evaluator bias.
 
 ---
-
 ## 5. Building the pre-training dataset *(approximately 00:29)*
 
 ### 5.1 Raw sources
