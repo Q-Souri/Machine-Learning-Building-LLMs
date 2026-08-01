@@ -23,10 +23,25 @@ Building an effective LLM involves much more than selecting a neural-network arc
 4. **Evaluation** — language-modelling metrics, downstream benchmarks and human preferences.
 5. **Systems** — accelerators, numerical precision, distributed training and optimized kernels.
 
+In this article last 3 topics are discussed as it is tried to be more focused on businesses and market needs and not to have academic approach. 
+
 The overall process has two major phases:
 
-- **Pre-training:** learn a broad statistical model of language from a massive corpus.
-- **Post-training:** adapt the base model to follow instructions and human preferences.
+- **Pre-training:** learn a broad statistical model of language from a massive corpus. For example: GPT2 or GPT3
+- **Post-training:** adapt the base model to follow instructions and human preferences. Foe example: ChatGPT
+
+### Language Modelling (LM)
+
+A **Language Model (LM)** represents a probability distribution over sequences of tokens or words.
+
+```text
+P(x1, x2, ..., xL)
+Here:
+
+- `x1, x2, ..., xL` represent the tokens or words in the sequence.
+- `L` represents the total length of the sequence.
+- `P(x1, x2, ..., xL)` represents the probability assigned to the complete sequence.
+
 
 ---
 
