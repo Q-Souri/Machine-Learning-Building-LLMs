@@ -80,6 +80,9 @@ Steps:
 
 There is an AR neural Language model explained here: 
 ![Language model example](images/AR_Neural_Language_Models.png)
+
+### Loss: (a simple ML task)
+A tsk of classify next tokens' index: 
  
 ### 2.2 Generation
 
