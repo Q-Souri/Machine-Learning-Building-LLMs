@@ -609,6 +609,8 @@ In PyTorch, tools such as `torch.compile` can capture and optimize computation g
 9. **Evaluation is multidimensional.** Perplexity, benchmarks, human comparisons and automated judges each capture different properties.
 10. **Systems optimization is essential.** Reduced precision, efficient kernels and less data movement translate directly into feasible training and serving.
 
+> **Source note:** These study notes are based primarily on Yann Dubois's Stanford CS229 guest lecture, *Building Large Language Models (LLMs)*. Additional explanations and standard mathematical concepts have been included for clarity. The notes are independently written and are not an official Stanford transcript.
+
 ## References
 
 - [Video: Stanford CS229 — Building Large Language Models (LLMs)](https://www.youtube.com/watch?v=9vM4p9NN0Ts)
