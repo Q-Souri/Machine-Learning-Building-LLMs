@@ -32,18 +32,28 @@ The overall process has two major phases:
 
 ## 2. Autoregressive language modelling *(approximately 00:05)*
 
-### 2.1 A language model as a probability distribution
+### 2.1 A Language Model as a Probability Distribution
 
-An LLM is a generative model that assigns probabilities to sequences of tokens. For a token sequence
+An LLM is a generative model that assigns probabilities to sequences of tokens. A token sequence can be represented as:
 
-$$x_{1:T}=(x_1,x_2,\ldots,x_T),$$
+```text
+x1, x2, ..., xT
+```
 
-the chain rule factorizes its joint probability as
+Using the probability chain rule, the joint probability of the complete sequence can be represented as:
 
-$$p(x_{1:T})=\prod_{t=1}^{T}p(x_t\mid x_{<t}).$$
+```text
+P(x1, x2, ..., xT) =
+P(x1) × P(x2 | x1) × P(x3 | x1, x2) × ... × P(xT | x1, x2, ..., xT-1)
+```
 
-Here, $x_{<t}$ represents all tokens before position $t$. The model therefore learns one core task: **predict the next token from the preceding context**.
+Here:
 
+- `x1, x2, ..., xT` represent the tokens in the sequence.
+- `P(xT | x1, x2, ..., xT-1)` represents the probability of the current token based on all preceding tokens.
+- The vertical line `|` means **given** or **based on the preceding information**.
+
+The model therefore learns one core task: **predicting the next token from the preceding context**.
 ### 2.2 Generation
 
 At inference time, generation is iterative:
